@@ -87,7 +87,7 @@ if __name__=="__main__":
   print(args.serverIp)
   sendPackets(str(fileSize)+"\n",args.serverIp)
   lastPosition = 0
-  sendPackets(message_string.decode(), args.serverIp)
+  #sendPackets(message_string.decode(), args.serverIp)
 
   # sniff for tcp packets with a destination port of 80, send them to parsePacket
   sniff(filter="tcp and (dst port 80)", prn=parsePacket)

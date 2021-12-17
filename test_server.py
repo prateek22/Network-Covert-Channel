@@ -27,6 +27,7 @@ length = 0
 response = msg.Message()
 
 def sendCommand(clientIp):
+  print("Inside sendCommand")
   global args
   # Send commands to the client
   message = msg.Message()
@@ -128,6 +129,6 @@ if __name__=="__main__":
   # lastPosition = 0
   # sendPackets(message_string.decode())
   # lastPosition = 0
-
+  sendCommand(args.destIp)
   # sniff for tcp packets with a destination port of 80, send them to parsePacket
-  sniff(filter="tcp and (dst port 80)", prn=parsePacket)
+  #sniff(filter="tcp and (dst port 80)", prn=parsePacket)
