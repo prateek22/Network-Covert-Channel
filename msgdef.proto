@@ -1,6 +1,17 @@
 syntax = "proto3";
 
-message ExpressionResponse {
+message Message{
+    oneof m {
+        Command command = 1;
+        Hello hello = 2;
+    }
+}
+
+message Command {
     bytes encrypt = 1;
     bytes hash = 2;
+}
+
+message Hello {
+    string text = 1;
 }
