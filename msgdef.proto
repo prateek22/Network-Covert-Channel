@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message ExpressionResponse {
+    bytes encrypt = 1;
+    bytes hash = 2;
+}
